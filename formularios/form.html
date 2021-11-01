@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style type="text/css">
+		label { color:white;background-color: brown;font-family:arial }
+
+	</style>
+</head>
+<body>
+	<h1>Registro de Usuario</h1>
+	<form action="registro.php" method="get">
+		<fieldset>	
+			<legend>Datos Personales</legend>	
+			<p><label for="nombre">Nombre:</label><input required type="text" id="nombre" name="nombre" maxlength="5" style="width:150px"></p>
+			<p><label>Apellidos:<input autofocus required placeholder="Escriba sus apellidos" type="text" name="apellidos"></label></p>
+			<p><label for="contrase">Contraseña:</label><input type="password" id="contrase" name="contrase" maxlength="8" style="width:100px"></p>
+			<p><label>Género:</label>Hombre: <input type="radio" value="H" 
+				name="genero">Mujer: <input checked type="radio" value="M" name="genero">    </p>	
+			<p><input type="checkbox" checked name="fuma">Fumador/a</p>
+			<p><label for="nacionalidad">Nacionalidad</label>
+				<br>
+				<select  name="nacionalidad" id="nacionalidad" >
+						<option value="nada" hidden selected="">--Seleccione una...</option>
+						<option value="es">Española</option>
+						<option value="eu" >Unión Europea</option>
+						<option value="noue">Fuera de la UE</option>
+				</select>
+			</p>
+			<p>
+				<label for="observaciones">Observaciones</label>
+				<br>
+				<textarea readonly id="observaciones" name="observaciones" rows="6" cols="30">Espero que esté satisfecho con el servicio</textarea>
+			</p>
+			<p><label>Color de coche:<input type="color" name="colorcoche"></label></p>
+			<p><label>Fecha de nacimiento:<input type="date" name="fecha_nac"></label></p>
+			<p><label>Cantidad artículos:<input min="1" max="10" type="number" name="cantidad_art"></label></p>
+			<p><label>e-mail:<input maxlength="30" type="email" name="correo-elec"></label></p>
+			<p><label>teléfono:<input placeholder="999999999"   type="tel" pattern="([0-9]{3})[0-9]{6}" name="telefono"></label></p>
+			<p><label>URL:<input  maxlength="99" type="url" name="url"></label></p>
+			<p><label>Edad:</label><input  min="0" max="120" type="range" name="edad"></p>
+			<p><label>Fotografía:</label><input  type="file" name="foto"></p>
+			<input type="submit" value="Registrar">
+			<input type="reset" value="Reiniciar">
+		</fieldset>
+	</form>
+</body>
+</html>
